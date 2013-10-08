@@ -5,6 +5,7 @@ Country-By-Continents-BG
 
 
 Съдържа:
+
 *Countries*
 +  `code` - 2-буквен код (BG, US, etc.)
 +  `name` - Име на държавата (България, Съединени Американски Щати, etc.)
@@ -12,3 +13,5 @@ Country-By-Continents-BG
 +  `continent_code` - код на континента (2-буквен, от continents таблицата)
 
 *Continents*
++ `code` - 2-буквен код на континента
++ `name` - име на континента
