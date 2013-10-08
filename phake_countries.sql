@@ -1,23 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 2.11.11.3
--- http://www.phpmyadmin.net
---
--- Хост: db
--- Време на генериране:  8 октомври 2013 в 12:00
--- Версия на сървъра: 5.5.34
--- Версия на PHP: 5.3.3
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-
---
--- БД: `phake_countries_bot`
---
-
--- --------------------------------------------------------
-
---
--- Структура на таблица `countries`
---
 
 CREATE TABLE IF NOT EXISTS `countries` (
   `code` char(2) NOT NULL,
@@ -27,10 +9,6 @@ CREATE TABLE IF NOT EXISTS `countries` (
   PRIMARY KEY (`code`),
   KEY `continent_code` (`continent_code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дъмп (схема) на данните в таблицата `countries`
---
 
 INSERT INTO `countries` (`code`, `name`, `iso3`, `continent_code`) VALUES
 ('AD', 'Андора', 'AND', 'EU'),
@@ -282,12 +260,5 @@ INSERT INTO `countries` (`code`, `name`, `iso3`, `continent_code`) VALUES
 ('ZM', 'Замбия', 'ZMB', 'AF'),
 ('ZW', 'Зимбабве', 'ZWE', 'AF');
 
---
--- Ограничения за дъмпнати таблици
---
-
---
--- Ограничения за таблица `countries`
---
 ALTER TABLE `countries`
   ADD CONSTRAINT `fk_countries_continents` FOREIGN KEY (`continent_code`) REFERENCES `continents` (`code`);
